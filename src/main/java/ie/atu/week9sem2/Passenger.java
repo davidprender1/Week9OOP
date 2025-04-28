@@ -7,6 +7,10 @@ public class Passenger {
 
     public Passenger(String title, String firstName,String lastName)
     {
+        if(!title.equals("Mr") && !title.equals("Mrs") && !title.equals("Ms"))
+        {
+            throw new IllegalArgumentException("Invalid passenger title");
+        }
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
